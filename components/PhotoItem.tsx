@@ -356,13 +356,13 @@ const PhotoItem: React.FC<PhotoItemProps> = React.memo((props) => {
       onTouchStart={handleInteractionStart}
     >
       {/* Image Area - Natural Aspect Ratio */}
-      <div className="w-full bg-gray-100 flex-shrink-0 overflow-hidden relative">
+      <div className="w-full bg-gray-100 min-h-[100px] overflow-hidden relative">
         <img
             src={photo.src}
             alt={photo.alt}
             loading="lazy"
             decoding="async"
-            className="w-full h-auto block pointer-events-none" // Allow natural height
+            className="w-full h-auto block pointer-events-none"
             draggable="false"
         />
       </div>
